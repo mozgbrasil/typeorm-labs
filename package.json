@@ -21,6 +21,6 @@
     "migration:create": "typeorm migration:create -n MultiTables",
     "migration:run": "npm run typeorm -- migration:run",
     "migration:revert": "npm run typeorm -- migration:revert",
-    "db:diagram": "ts-node ./node_modules/.bin/typeorm-uml ormconfig.json"
+    "db:diagram": "ts-node ./node_modules/.bin/typeorm-uml ormconfig.json --exclude='Migrations,TypeormMetadata' --color class.ArrowColor=#ff9900 --color class.BorderColor=#ff9900 --color class.BackgroundColor=#efefef --color column=#ddd"
   }
 }
