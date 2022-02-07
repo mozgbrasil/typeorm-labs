@@ -27,13 +27,27 @@ code --new-window .
 ## Dependências
 
 ```
-npm i typeorm -g
+npm i -g typeorm
 
   typeorm init --name typeorm-labs --database postgres
 
-npm i typeorm-model-generator -g
+npm i -g typeorm-model-generator
 
-  typeorm-model-generator -h localhost -d 'typeorm-labs' -p 5432 -u postgres -x postgres -e postgres
+  typeorm-model-generator -h localhost -p 5432 -d 'typeorm_labs' -u postgres -x postgres -e postgres
+
+  typeorm-model-generator -h localhost -p 3306 -d 'AuC' -u db_user -x db_pass -e mysql
+
+https://github.com/kuangshp/nest-code-generate
+
+cd ~/dados/acid-workflow/private/github/kuangshp_nest-code-generate
+mkdir out
+node ./bin/nest-code-generate Cupom out
+node ./bin/nest-code-generate CanalVenda out
+node ./bin/nest-code-generate CupomRegraUso out
+node ./bin/nest-code-generate GrupoSegurado out
+node ./bin/nest-code-generate LogAlteracaoCupom out
+
+
 ```
 
 # Awesome Project Build with TypeORM
